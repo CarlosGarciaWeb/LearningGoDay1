@@ -19,4 +19,25 @@ func main() {
 	i = 7
 
 	fmt.Println("is is set to", i)
+
+
+	// using the := creates a variable with the same data type of the input, in this case
+	// the input is the return output from the function saySomething which returns a 
+	// string with value "something"
+	whatWasSaid := saySomething()
+
+	fmt.Println("the function returned", whatWasSaid)
+	
+
+}
+
+
+
+// the string notation after the func means that the func will in fact return a string value
+// in this case it returns "something"
+
+func saySomething() string {
+
+	return "something"
+
 }
