@@ -24,9 +24,9 @@ func main() {
 	// using the := creates a variable with the same data type of the input, in this case
 	// the input is the return output from the function saySomething which returns a 
 	// string with value "something"
-	whatWasSaid := saySomething()
+	whatWasSaid, otherThingSaid := saySomething()
 
-	fmt.Println("the function returned", whatWasSaid)
+	fmt.Println("the function returned", whatWasSaid, otherThingSaid)
 	
 
 }
@@ -34,10 +34,12 @@ func main() {
 
 
 // the string notation after the func means that the func will in fact return a string value
-// in this case it returns "something"
+// in this case it returns "something", a second denoted string means the function will
+// return a second output of string with value "else"
+// however, this new output must be used or it will generate an error
 
-func saySomething() string {
+func saySomething() (string, string) {
 
-	return "something"
+	return "something", "else"
 
 }
